@@ -14,7 +14,13 @@ function show(id) {
   const post = posts.data.find((post) => post.id === id);
   return post;
 }
-function update(id, title, body) {}
+function update(id, title, body) {
+  const postIndex = posts.data.findIndex(post => post.id == id);
+  if (postIndex !==-1){
+      posts.data[postIndex].title = title;
+      posts.data[postIndex].body = body;
+  }
+}
 function destroy(id) {
   const postIndex = posts.data.findIndex((post) => post.id === id);
 
