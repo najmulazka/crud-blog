@@ -15,3 +15,11 @@ if (found) {
 }
 // test update post by id
 // test delete post by id
+const hapus = 1;
+const hapusPost = destroy(hapus);
+
+if (hapusPost) {
+  console.log(`Menghapus post dengan ID ${hapus}:`, hapusPost);
+} else {
+  console.log(`Post dengan ID ${hapus} tidak ditemukan.`);
+}
